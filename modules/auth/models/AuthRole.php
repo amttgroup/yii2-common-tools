@@ -116,13 +116,13 @@ class AuthRole extends \yii\db\ActiveRecord
      */
     public static function getOperationsArr($authRoleIds)
     {
-        if (static::$roleOperationList === false) {
+        if (self::$roleOperationList === false) {
             $authRoleIds = array_filter($authRoleIds);
             if (!$authRoleIds) {
                 return [];
             }
-            static::$roleOperationList = ArrayHelper::getColumn(static::find()->select('operation_list')->andWhere(['id' => $authRoleIds])->asArray()->all(), 'operation_list');
+            self::$roleOperationList = ArrayHelper::getColumn(static::find()->select('operation_list')->andWhere(['id' => $authRoleIds])->asArray()->all(), 'operation_list');
         }
-        return static::$roleOperationList;
+        return self::$roleOperationList;
     }
 }
