@@ -24,8 +24,8 @@
   },
   "autoload": {
     "psr-4": {
-      "amttgroup\\": "",
-      "amttgroup\\auth\\": "modules/auth"
+      "kriss\\": "",
+      "kriss\\auth\\": "modules/auth"
     }
   }
 }
