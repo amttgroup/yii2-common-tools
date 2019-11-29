@@ -53,9 +53,9 @@ class ActionColumn extends \kartik\grid\ActionColumn
     public function init()
     {
         $this->initKrissI18N();
-//         if (!isset($this->header)) {
-//             $this->header = Yii::t('kriss', '操作');
-//         }
+        if (!isset($this->header)) {
+            $this->header = Yii::t('kriss', '操作');
+        }
 
         parent::init();
     }
