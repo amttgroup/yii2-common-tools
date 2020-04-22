@@ -23,7 +23,7 @@ class AuthRoleSearch extends AuthRole
      */
     public function getQuery()
     {
-        return (Module::getAuthRoleClass())::find();
+        return (Module::getAuthRoleClass())::find()->where('id != 1');
     }
 
     /**
