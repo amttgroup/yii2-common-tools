@@ -93,7 +93,7 @@ class AuthRole extends \yii\db\ActiveRecord
      */
     public static function findAllIdName($map = false)
     {
-        $models = static::find()->select(['id', 'name'])->asArray()->all();
+        $models = static::find()->select(['id', 'name'])where('id != 1')->asArray()->all();
         if ($map) {
             $models = ArrayHelper::map($models, 'id', 'name');
         }
